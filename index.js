@@ -137,6 +137,7 @@ const kamal= [
   const contestant= kamal.filter((data)=>data.id== id)
 // const client= await createConnection();
 // const contestant = getPollById(client, id);
+response.send(contestant);
 
  });
 
