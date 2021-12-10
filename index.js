@@ -36,6 +36,7 @@ app.get('/', (request, response)=> {
   
 
 });
+
 // const kamal= [
 //   {
 //    "createdAt": "2021-11-12T17:51:55.914Z",
@@ -133,7 +134,6 @@ app.get('/', (request, response)=> {
  app.get("/kamal", async (request, response)=> {
   const client = await createConnection();
   const contestant = await getAllPoll(client);
-
 response.send(contestant); 
 
 app.get("/kamal/:id", async (request, response)=> {
