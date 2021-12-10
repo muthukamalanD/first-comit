@@ -189,5 +189,5 @@ async function getPollByContent(client, content) {
   console.log("succesfully connected poll by content");
   return result;
 };
- 
-app.listen(PORT,()=>console.log("server started in port 5000"));
+
+app.listen(PORT,()=>console.log("server was started in port 5000"));
