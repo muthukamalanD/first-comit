@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { MongoClient } from "mongodb";
 dotenv.config();
 const app = express();
-const PORT = process.env.PORTAL;
+
 async function createConnection(){
 const MONGO_URL = process.env.URL;
 ;
@@ -189,5 +189,6 @@ async function getPollByContent(client, content) {
   console.log("succesfully connected poll by content");
   return result;
 };
-
-app.listen(PORT,()=>console.log("server started in: "));
+console.log("hi heroku");
+// const PORT = process.env.PORTAL;
+app.listen(5000,()=>console.log("server started in "));
