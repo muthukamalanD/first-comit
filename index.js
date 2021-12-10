@@ -13,7 +13,7 @@ try{
   await client.connect();
  
   return client;
-  // getPollById(client, "4");
+  // getPollById(client, "5");
 } catch (err){
   console.log(err);
 }
@@ -190,5 +190,5 @@ async function getPollByContent(client, content) {
   return result;
 };
 
-// const PORT = process.env.PORTAL;
-app.listen(5000,()=>console.log("server started in "));
+const PORT = process.env.PORT;
+app.listen(5000,()=>console.log("server started in 5000 "));
