@@ -3,10 +3,11 @@ import {createConnection} from "../index.js";
 import express from "express";
 import bcrypt from "bcrypt";
 import {insertUser} from "../helper.js"
+import {auth} from "../middleware/auth.js"
 
 const router = express.Router();
 
-router.route("/").get( async (request, response)=> {
+router.route("/").get( auth,async (request, response)=> {
   const client = await createConnection();
   const contestant = await getAllUser(client);
 response.send(contestant); 
